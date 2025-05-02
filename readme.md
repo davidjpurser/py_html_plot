@@ -49,5 +49,8 @@ Unlikely:
 In theory, the HTML and CSS could be constructed manually, however, the tool in intended to be used via the Python interface. As such, the tool focuses on creating a simple python interface, potentially generating somewhat-ugly (albeit still readable) HTML and CSS.
 
 
+# Example
+![example](example.svg)
+
 
 

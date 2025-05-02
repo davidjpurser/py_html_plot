@@ -1,0 +1,361 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1100">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:sans-serif;">
+      <div  style="padding-bottom: 30px">Testing a bar chart.
+<style >    .plot {
+      position: relative;
+      width: 100%; /* Full width */
+      aspect-ratio: 16/5;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+
+    .region { 
+        position:absolute;
+        top:0;
+        left:0;
+        background-color: rgba(0, 0, 0, 0.1); /* Pale Grey */
+    }    
+
+
+    /* The point styles */
+    .point {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: blue; /* Change point to blue */
+      border-radius: 50%;
+      transform: translate(-50%, -50%); /* Center the dot */
+    }
+
+    /* Add the label on hover */
+    .point:hover::after {
+      content: attr(data-name); /* Get the value of the data-name attribute */
+      position: absolute;
+      top: 100%; /* Position label below the point */
+      left: 100%; /* Position label to the right of the point */
+      transform: translate(10px, 5px); /* Adjust position to the right and below */
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-size: 12px;
+      width:100px;
+    }
+
+    /* Axis and ticks */
+    .x-axis,
+    .y-axis {
+      position: absolute;
+    }
+
+    /* X-axis line at the bottom of the plot */
+    .x-axis {
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      border-top: 2px solid black;
+    }
+
+    /* Y-axis line at the left of the plot */
+    .y-axis {
+      left: 0;
+      height: 100%;
+      width: 1px;
+      border-left: 2px solid black;
+    }
+
+    /* X and Y Axis Tick marks */
+    .tick {
+      position: absolute;
+      background-color: black;
+    }
+    .gridline {
+      position: absolute;
+      background-color: gray;
+    }
+
+    .tick-x {
+      height: 6px; /* Height of the tick */
+      width: 2px; /* Width of the tick */
+      bottom: 0; /* Position at the bottom of the plot */
+    }
+    .tick-y {
+      width: 6px; /* Width of the tick */
+      height: 2px; /* Height of the tick */
+      left: 0; /* Position at the left of the plot */
+    }
+
+    /* Labels for the X and Y ticks */
+    .tick::after {
+      content: attr(data-label);
+      position: absolute;
+      font-size: 12px;
+      color: black;
+      background: transparent;
+    }
+
+    /* Position for X-axis tick labels */
+    .tick-x::after { left: -5px; bottom: -15px; }
+
+    /* Position for Y-axis tick labels */
+    .tick-y::after { left: 10px; bottom:-5px; }
+
+
+    .label {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background: transparent;
+    transform: translateX(-50%) 
+    }
+
+</style>
+<div class="plot" style="margin-top: 30px"><div class="tick tick-y gridline" style="left: 0.0%; top: 100.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 80.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 60.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 40.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 20.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 0.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y" data-label="0" style="left: 0.0%; top: 100.0%"></div>
+<div class="tick tick-y" data-label="1" style="left: 0.0%; top: 90.0%"></div>
+<div class="tick tick-y" data-label="2" style="left: 0.0%; top: 80.0%"></div>
+<div class="tick tick-y" data-label="3" style="left: 0.0%; top: 70.0%"></div>
+<div class="tick tick-y" data-label="4" style="left: 0.0%; top: 60.0%"></div>
+<div class="tick tick-y" data-label="5" style="left: 0.0%; top: 50.0%"></div>
+<div class="tick tick-y" data-label="6" style="left: 0.0%; top: 40.0%"></div>
+<div class="tick tick-y" data-label="7" style="left: 0.0%; top: 30.0%"></div>
+<div class="tick tick-y" data-label="8" style="left: 0.0%; top: 20.0%"></div>
+<div class="tick tick-y" data-label="9" style="left: 0.0%; top: 10.0%"></div>
+<div class="tick tick-y" data-label="10" style="left: 0.0%; top: 0.0%"></div>
+<div class="region" style="left: 1.3157894736842104%; top: 90.0%; right: 93.42105263157895%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 21.578947368421055%; top: 80.0%; right: 73.15789473684211%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 41.8421052631579%; top: 70.0%; right: 52.89473684210526%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 62.10526315789474%; top: 60.0%; right: 32.631578947368425%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 82.36842105263158%; top: 0.0%; right: 12.36842105263159%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 6.842105263157896%; top: 80.0%; right: 87.89473684210526%; bottom: 0.0%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 27.105263157894736%; top: 70.0%; right: 67.63157894736841%; bottom: 0.0%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 47.368421052631575%; top: 90.0%; right: 47.36842105263158%; bottom: 0.0%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 67.63157894736842%; top: 50.0%; right: 27.105263157894726%; bottom: 0.0%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 87.89473684210526%; top: 90.0%; right: 6.84210526315789%; bottom: 0.0%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 12.368421052631579%; top: 100.0%; right: 82.36842105263158%; bottom: 0.0%; background-color: #B3E5B3"></div>
+<div class="region" style="left: 32.631578947368425%; top: 100.0%; right: 62.10526315789473%; bottom: 0.0%; background-color: #B3E5B3"></div>
+<div class="region" style="left: 52.89473684210526%; top: 80.0%; right: 41.84210526315789%; bottom: 0.0%; background-color: #B3E5B3"></div>
+<div class="region" style="left: 73.15789473684211%; top: 40.0%; right: 21.578947368421055%; bottom: 0.0%; background-color: #B3E5B3"></div>
+<div class="region" style="left: 93.42105263157895%; top: 90.0%; right: 1.3157894736842195%; bottom: 0.0%; background-color: #B3E5B3"></div>
+<div class="label" style="left: 50%; top: -5%; text-align: center">This is the best y in the world!</div></div>
+<div class="plot" style="margin-top: 30px"><div class="tick tick-y gridline" style="left: 0.0%; top: 100.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 86.66666666666667%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 73.33333333333333%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 60.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 46.666666666666664%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 33.33333333333334%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 20.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 6.666666666666671%; width: 100%; height: 1px"></div>
+<div class="tick tick-y" data-label="0" style="left: 0.0%; top: 100.0%"></div>
+<div class="tick tick-y" data-label="1" style="left: 0.0%; top: 93.33333333333333%"></div>
+<div class="tick tick-y" data-label="2" style="left: 0.0%; top: 86.66666666666667%"></div>
+<div class="tick tick-y" data-label="3" style="left: 0.0%; top: 80.0%"></div>
+<div class="tick tick-y" data-label="4" style="left: 0.0%; top: 73.33333333333333%"></div>
+<div class="tick tick-y" data-label="5" style="left: 0.0%; top: 66.66666666666667%"></div>
+<div class="tick tick-y" data-label="6" style="left: 0.0%; top: 60.0%"></div>
+<div class="tick tick-y" data-label="7" style="left: 0.0%; top: 53.333333333333336%"></div>
+<div class="tick tick-y" data-label="8" style="left: 0.0%; top: 46.666666666666664%"></div>
+<div class="tick tick-y" data-label="9" style="left: 0.0%; top: 40.0%"></div>
+<div class="tick tick-y" data-label="10" style="left: 0.0%; top: 33.33333333333334%"></div>
+<div class="tick tick-y" data-label="11" style="left: 0.0%; top: 26.66666666666667%"></div>
+<div class="tick tick-y" data-label="12" style="left: 0.0%; top: 20.0%"></div>
+<div class="tick tick-y" data-label="13" style="left: 0.0%; top: 13.333333333333329%"></div>
+<div class="tick tick-y" data-label="14" style="left: 0.0%; top: 6.666666666666671%"></div>
+<div class="tick tick-y" data-label="15" style="left: 0.0%; top: 0.0%"></div>
+<div class="region" style="left: 2.941176470588235%; top: 93.33333333333333%; right: 85.29411764705883%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 23.52941176470588%; top: 86.66666666666667%; right: 64.70588235294117%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 44.11764705882353%; top: 80.0%; right: 44.11764705882353%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 64.70588235294117%; top: 73.33333333333333%; right: 23.529411764705884%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 85.29411764705883%; top: 33.33333333333334%; right: 2.941176470588232%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 2.941176470588235%; top: 80.0%; right: 85.29411764705883%; bottom: 6.666666666666667%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 23.52941176470588%; top: 66.66666666666667%; right: 64.70588235294117%; bottom: 13.333333333333334%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 44.11764705882353%; top: 73.33333333333333%; right: 44.11764705882353%; bottom: 20.0%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 64.70588235294117%; top: 40.0%; right: 23.529411764705884%; bottom: 26.666666666666668%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 85.29411764705883%; top: 26.66666666666667%; right: 2.941176470588232%; bottom: 66.66666666666666%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 2.941176470588235%; top: 80.0%; right: 85.29411764705883%; bottom: 20.0%; background-color: #B3E5B3"></div>
+<div class="region" style="left: 23.52941176470588%; top: 66.66666666666667%; right: 64.70588235294117%; bottom: 33.33333333333333%; background-color: #B3E5B3"></div>
+<div class="region" style="left: 44.11764705882353%; top: 60.0%; right: 44.11764705882353%; bottom: 26.666666666666668%; background-color: #B3E5B3"></div>
+<div class="region" style="left: 64.70588235294117%; top: 0.0%; right: 23.529411764705884%; bottom: 60.0%; background-color: #B3E5B3"></div>
+<div class="region" style="left: 85.29411764705883%; top: 20.0%; right: 2.941176470588232%; bottom: 73.33333333333333%; background-color: #B3E5B3"></div>
+<div class="label" style="left: 50%; top: -5%; text-align: center">This is the best y in the world!</div></div></div>
+
+<div  style="padding-bottom: 30px">Here is some preamble.<style >    .plot {
+      position: relative;
+      width: 100%; /* Full width */
+      aspect-ratio: 16/5;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+
+    .region { 
+        position:absolute;
+        top:0;
+        left:0;
+        background-color: rgba(0, 0, 0, 0.1); /* Pale Grey */
+    }    
+
+
+    /* The point styles */
+    .point {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: blue; /* Change point to blue */
+      border-radius: 50%;
+      transform: translate(-50%, -50%); /* Center the dot */
+    }
+
+    /* Add the label on hover */
+    .point:hover::after {
+      content: attr(data-name); /* Get the value of the data-name attribute */
+      position: absolute;
+      top: 100%; /* Position label below the point */
+      left: 100%; /* Position label to the right of the point */
+      transform: translate(10px, 5px); /* Adjust position to the right and below */
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-size: 12px;
+      width:100px;
+    }
+
+    /* Axis and ticks */
+    .x-axis,
+    .y-axis {
+      position: absolute;
+    }
+
+    /* X-axis line at the bottom of the plot */
+    .x-axis {
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      border-top: 2px solid black;
+    }
+
+    /* Y-axis line at the left of the plot */
+    .y-axis {
+      left: 0;
+      height: 100%;
+      width: 1px;
+      border-left: 2px solid black;
+    }
+
+    /* X and Y Axis Tick marks */
+    .tick {
+      position: absolute;
+      background-color: black;
+    }
+    .gridline {
+      position: absolute;
+      background-color: gray;
+    }
+
+    .tick-x {
+      height: 6px; /* Height of the tick */
+      width: 2px; /* Width of the tick */
+      bottom: 0; /* Position at the bottom of the plot */
+    }
+    .tick-y {
+      width: 6px; /* Width of the tick */
+      height: 2px; /* Height of the tick */
+      left: 0; /* Position at the left of the plot */
+    }
+
+    /* Labels for the X and Y ticks */
+    .tick::after {
+      content: attr(data-label);
+      position: absolute;
+      font-size: 12px;
+      color: black;
+      background: transparent;
+    }
+
+    /* Position for X-axis tick labels */
+    .tick-x::after { left: -5px; bottom: -15px; }
+
+    /* Position for Y-axis tick labels */
+    .tick-y::after { left: 10px; bottom:-5px; }
+
+
+    .label {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background: transparent;
+    transform: translateX(-50%) 
+    }
+
+</style>
+<div class="plot" style="height: 500px; margin-top: 30px"><div class="region" style="left: 0.0%; top: 0.0%; right: 0.0%; bottom: 0.0%; background-color: #FFB3B3"></div>
+<div class="region" style="left: 10.0%; top: 0.0%; right: 0.0%; bottom: 50.0%; background-color: #FFF5BA"></div>
+<div class="region" style="left: 50.0%; top: 0.0%; right: 0.0%; bottom: 20.0%; background-color: #B3E5B3"></div>
+<div class="tick tick-x gridline" style="left: 0.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 10.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 20.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 30.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 40.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 50.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 60.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 70.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 80.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 90.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-x gridline" style="left: 100.0%; top: 0%; width: 1px; height: 100%"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 100.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 90.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 80.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 70.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 60.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 50.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 40.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 30.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 20.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 10.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-y gridline" style="left: 0.0%; top: 0.0%; width: 100%; height: 1px"></div>
+<div class="tick tick-x" data-label="0" style="left: 0.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="10" style="left: 10.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="20" style="left: 20.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="30" style="left: 30.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="40" style="left: 40.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="50" style="left: 50.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="60" style="left: 60.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="70" style="left: 70.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="80" style="left: 80.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="90" style="left: 90.0%; top: 100.0%"></div>
+<div class="tick tick-x" data-label="100" style="left: 100.0%; top: 100.0%"></div>
+<div class="tick tick-y" data-label="0" style="left: 0.0%; top: 100.0%"></div>
+<div class="tick tick-y" data-label="1" style="left: 0.0%; top: 90.0%"></div>
+<div class="tick tick-y" data-label="2" style="left: 0.0%; top: 80.0%"></div>
+<div class="tick tick-y" data-label="3" style="left: 0.0%; top: 70.0%"></div>
+<div class="tick tick-y" data-label="4" style="left: 0.0%; top: 60.0%"></div>
+<div class="tick tick-y" data-label="5" style="left: 0.0%; top: 50.0%"></div>
+<div class="tick tick-y" data-label="6" style="left: 0.0%; top: 40.0%"></div>
+<div class="tick tick-y" data-label="7" style="left: 0.0%; top: 30.0%"></div>
+<div class="tick tick-y" data-label="8" style="left: 0.0%; top: 20.0%"></div>
+<div class="tick tick-y" data-label="9" style="left: 0.0%; top: 10.0%"></div>
+<div class="tick tick-y" data-label="10" style="left: 0.0%; top: 0.0%"></div>
+<div class="label" style="left: 95.0%; top: 55.0%; text-align: center">green</div>
+<div class="label" style="left: 15.0%; top: 15.0%; text-align: center">yellow</div>
+<div class="label" style="left: 95.0%; top: 85.0%; text-align: center">red</div>
+<div class="point" data-name="A" style="left: 0.0%; top: 100.0%"></div>
+<div class="point" data-name="C" style="left: 40.0%; top: 70.0%"></div>
+<div class="point" data-name="B" style="left: 20.0%; top: 60.0%"></div>
+<div class="point" data-name="D" style="left: 10.0%; top: 50.0%"></div>
+<div class="point" data-name="E" style="left: 30.0%; top: 40.0%"></div>
+<div class="point" data-name="F" style="left: 50.0%; top: 30.0%"></div>
+<div class="point" data-name="G" style="left: 60.0%; top: 20.0%"></div>
+<div class="point" data-name="H" style="left: 70.0%; top: 10.0%"></div>
+<div class="point" data-name="I" style="left: 80.0%; top: 0.0%"></div></div></div>
+
+    </div>
+  </foreignObject>
+</svg>
