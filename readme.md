@@ -18,7 +18,7 @@ The plots are defined using python code, which generates the HTML and CSS code f
 
 ## Why use HTML and CSS Plots
 
-Using purser HTML and CSS for plots eliminates the need for JavaScript, making your application lighter and reducing potential security vulnerabilities. It also ensures compatibility with environments where JavaScript is disabled or restricted, while still providing visually appealing and functional charts.
+Using pure HTML and CSS for plots eliminates the need for JavaScript, making your application lighter and reducing potential security vulnerabilities. It also ensures compatibility with environments where JavaScript is disabled or restricted, while still providing visually appealing and functional charts.
 
 This tool was initially built with BookStack in mind, aiming to provide an interactive / non-static plots in a knowledge base environment where JavaScript is not allowed. However, it can be used in any HTML environment, including static sites, blogs, and documentation pages.
 
