@@ -1,0 +1,109 @@
+    .plot {
+      position: relative;
+      width: 100%; /* Full width */
+      aspect-ratio: 16/5;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+
+    .region { 
+        position:absolute;
+        top:0;
+        left:0;
+        background-color: rgba(0, 0, 0, 0.1); /* Pale Grey */
+    }    
+
+
+    /* The point styles */
+    .point {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: blue; /* Change point to blue */
+      border-radius: 50%;
+      transform: translate(-50%, -50%); /* Center the dot */
+    }
+
+    /* Add the label on hover */
+    .point:hover::after {
+      content: attr(data-name); /* Get the value of the data-name attribute */
+      position: absolute;
+      top: 100%; /* Position label below the point */
+      left: 100%; /* Position label to the right of the point */
+      transform: translate(10px, 5px); /* Adjust position to the right and below */
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-size: 12px;
+      width:100px;
+    }
+
+    /* Axis and ticks */
+    .x-axis,
+    .y-axis {
+      position: absolute;
+    }
+
+    /* X-axis line at the bottom of the plot */
+    .x-axis {
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      border-top: 2px solid black;
+    }
+
+    /* Y-axis line at the left of the plot */
+    .y-axis {
+      left: 0;
+      height: 100%;
+      width: 1px;
+      border-left: 2px solid black;
+    }
+
+    /* X and Y Axis Tick marks */
+    .tick {
+      position: absolute;
+      background-color: black;
+    }
+    .gridline {
+      position: absolute;
+      background-color: gray;
+    }
+
+    .tick-x {
+      height: 6px; /* Height of the tick */
+      width: 2px; /* Width of the tick */
+      bottom: 0; /* Position at the bottom of the plot */
+    }
+    .tick-y {
+      width: 6px; /* Width of the tick */
+      height: 2px; /* Height of the tick */
+      left: 0; /* Position at the left of the plot */
+    }
+
+    /* Labels for the X and Y ticks */
+    .tick::after {
+      content: attr(data-label);
+      position: absolute;
+      font-size: 12px;
+      color: black;
+      background: transparent;
+    }
+
+    /* Position for X-axis tick labels */
+    .tick-x::after { left: -5px; bottom: -15px; }
+
+    /* Position for Y-axis tick labels */
+    .tick-y::after { left: 10px; bottom:-5px; }
+
+
+    .label {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background: transparent;
+    transform: translateX(-50%) 
+    }
+
